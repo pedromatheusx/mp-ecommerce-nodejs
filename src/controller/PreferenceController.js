@@ -11,15 +11,16 @@ mercadopago.configure({
 module.exports = {
 
   async preference(req, res) {
-    const { title, price, unit } = req.body
+    const { title, price, unit } = req.query
+console.log(req.query)
     // Cria um objeto de preferência
 
     let preference = {
       items: [
         {
           title,
-          quantity: unit,
-          unit_price: price,
+          quantity: parseInt(unit),
+          unit_price: Number(price),
 
         }
       ]
@@ -29,7 +30,6 @@ module.exports = {
       .then(function (response) {
         // Este valor substituirá a string "<%= global.id %>" no seu HTML
         global.id = response.body.id;
-        console.log(global.id)
       }).catch(function (error) {
         console.log(error);
       });

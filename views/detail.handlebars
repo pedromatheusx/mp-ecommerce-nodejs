@@ -73,6 +73,7 @@
                             </div>
 
                         </div>
+                        <form action="http://localhost:3000/preference?price={{price}}&unit={{unit}}&title={{title}}">
                         <div class="as-producttile-info" style="float:left;min-height: 168px;">
                             <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
                                 <div class="as-producttile-title">
@@ -89,6 +90,7 @@
                                 <h3>
                                     {{ unit }}
                                 </h3>
+                                {{test}}
                             </div>
                             <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
                                 data-preference-id='<%= global.id %>'>
@@ -96,7 +98,9 @@
 
                             {{!-- <button type="submit" class="mercadopago-button" formmethod="post"> Pagar</button>
                             --}}
+
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
