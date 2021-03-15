@@ -12,7 +12,6 @@ module.exports = {
 
   async preference(req, res) {
     const { title, price, unit } = req.query
-console.log(req.query)
     // Cria um objeto de preferência
 
     let preference = {
@@ -29,7 +28,8 @@ console.log(req.query)
     mercadopago.preferences.create(preference)
       .then(function (response) {
         // Este valor substituirá a string "<%= global.id %>" no seu HTML
-        global.id = response.body.id;
+        // global.id = response.body.id;
+     return res.redirect(response.body.init_point);
       }).catch(function (error) {
         console.log(error);
       });
