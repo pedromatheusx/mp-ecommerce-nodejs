@@ -51,9 +51,9 @@ module.exports = {
         },
         notification_url: "https://webhook.site/c7d600eb-99c9-4c92-a8ab-29521a699356",
         back_urls: {
-          success: "http://localhost:3000/success",
-          failure: "http://localhost:3000/failure",
-          pending: "http://localhost:3000/pending"
+          success: "https://mercado-pago-pro.herokuapp.com/success",
+          failure: "https://mercado-pago-pro.herokuapp.com/failure",
+          pending: "https://mercado-pago-pro.herokuapp.com/pending"
         },
         auto_return: 'approved',
     };
